@@ -1,0 +1,22 @@
+package src;
+public class Task9 {
+    public static void main(String[] args) {
+
+        int[][] C = new int[5][5];
+        int product = 1;
+
+        for(int i=0;i<5;i++){
+            for(int j=0;j<5;j++){
+
+                C[i][j]=(int)(Math.random()*20-10);
+                System.out.print(C[i][j]+" ");
+
+                if(i==j && C[i][j]>0)
+                    product*=C[i][j];
+            }
+            System.out.println();
+        }
+
+        System.out.println("Произведение диагонали: "+product);
+    }
+}
