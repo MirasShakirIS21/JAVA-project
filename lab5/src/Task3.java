@@ -1,6 +1,7 @@
+package src;
 import java.util.Scanner;
 
-public class Task1 {
+public class Task3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -8,14 +9,12 @@ public class Task1 {
         System.out.print("Введите число N: ");
         int n = scanner.nextInt();
 
-        if (n < 0) {
-            for (int i = n; i <= 0; i++) {
-                System.out.println(i);
-            }  
-        }
+        long factorial = 1;
 
         for (int i = 1; i <= n; i++) {
-            System.out.println(i);
+            factorial *= i;
         }
+
+        System.out.println("Факториал числа " + n + " равен: " + factorial);
     }
 }

@@ -1,6 +1,7 @@
+package src;
 import java.util.Scanner;
 
-public class Task2 {
+public class Task1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -8,14 +9,14 @@ public class Task2 {
         System.out.print("Введите число N: ");
         int n = scanner.nextInt();
 
-        int sum = 0;
-        int i = 1;
-
-        while (i <= n) {
-            sum += i;
-            i++;
+        if (n < 0) {
+            for (int i = n; i <= 0; i++) {
+                System.out.println(i);
+            }  
         }
 
-        System.out.println("Сумма чисел от 1 до " + n + " равна: " + sum);
+        for (int i = 1; i <= n; i++) {
+            System.out.println(i);
+        }
     }
 }
