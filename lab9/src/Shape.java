@@ -1,9 +1,25 @@
+// Базовый класс
 class Shape {
+    // Метод для вычисления площади (по умолчанию 0)
     double area() {
         return 0;
     }
+
+    // Метод main внутри Shape
+    public static void main(String[] args) {
+        // Создаем объекты
+        Shape circle = new Circle(5);        // радиус 5
+        Shape rectangle = new Rectangle(4, 6); // ширина 4, высота 6
+        Shape triangle = new Triangle(3, 8);   // основание 3, высота 8
+
+        // Выводим площадь каждой фигуры
+        System.out.println("Circle area: " + circle.area());
+        System.out.println("Rectangle area: " + rectangle.area());
+        System.out.println("Triangle area: " + triangle.area());
+    }
 }
 
+// Производный класс Circle
 class Circle extends Shape {
     double radius;
 
@@ -17,8 +33,10 @@ class Circle extends Shape {
     }
 }
 
+// Производный класс Rectangle
 class Rectangle extends Shape {
-    double width, height;
+    double width;
+    double height;
 
     Rectangle(double width, double height) {
         this.width = width;
@@ -31,8 +49,10 @@ class Rectangle extends Shape {
     }
 }
 
+// Производный класс Triangle
 class Triangle extends Shape {
-    double base, height;
+    double base;
+    double height;
 
     Triangle(double base, double height) {
         this.base = base;
